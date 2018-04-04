@@ -1,0 +1,31 @@
+.borde-redondeado{
+  border-radius: 2px;
+  border:1px solid silver;
+}
+/*# sourceMappingURL=bootstrap-theme.css.map */
+
+body{ padding-top: 60px; }
+.mb-10{
+
+}
+
+.barra-lateral{
+  position: fixed;
+  top:50px;
+  bottom:0;
+  padding: 0px;
+  padding-top: 20px;
+  background-color: #ebebeb;
+  border-right: 1px solid silver;
+}
+
+.loading{
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ebebeb;
+
+}

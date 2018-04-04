@@ -1,0 +1,39 @@
+<h1>Films</h1>
+
+<hr/>
+<div class="row" >
+    <div class="col-sm-6" >
+      Ordernar Por
+
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default" ng-click="sortOp='release_date'">Fecha</button>
+        <button type="button" class="btn btn-default" ng-click="sortOp='name'">Nombre</button>
+      </div>
+    </div>
+    <div class="col-sm-6" >
+        <input type="text" ng-model="searchByTitle" class="form-control" placeholder="Buscar por titulo" />
+    </div>
+</div>
+
+<hr/>
+
+<div class="row">
+
+  <div ng-repeat="pel in peliculas | orderBy:sortOp | filter:{title:searchByTitle}" >
+    <div class="col-sm-4 col-md-3">
+      <div class="thumbnail">
+        <img ng-src="img/films/{{pel.title}}.jpg" alt="...">
+        <div class="caption">
+          <h3>{{pel.title}}</h3>
+          <p>Dirigida por {{pel.director}}</p>
+          <p>Producida por  {{pel.producer}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-if="($index +1)%4==0" class="visible-md visible-lg clearfix"></div>
+    <div ng-if="$index%2==2" class="visible-sm clearfix"></div>
+</div>
+  </div>
+
+</div>

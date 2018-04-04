@@ -1,0 +1,14 @@
+<h1>Naves Espaciales</h1>
+
+
+
+<table class="table table-bordered" >
+    <tbody>
+        <tr ng-repeat="nave in naves" >
+          <td>{{$index}}</td>
+          <td>{{personaje.name}}</td>
+          <td>{{personaje.category}}</td>
+          <td><a href="#/equipo/{{equipo.oid}}/jugadores" >Ver Jugadores</a></td>
+        </tr>
+    </tbody>
+</table>
